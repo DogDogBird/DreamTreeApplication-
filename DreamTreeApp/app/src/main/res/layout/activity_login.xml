@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    >
+
+    <LinearLayout
+        android:id = "@+id/line1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:weightSum="6"
+        >
+
+        <Space
+            android:layout_weight="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_weight="2"
+            android:id = "@+id/editText1"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:hint="Write ID"
+            android:layout_gravity="bottom|center"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id = "@+id/line2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:weightSum="6">
+        <Space
+            android:layout_weight="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id = "@+id/editText2"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:hint="Write Password"/>
+    </LinearLayout>
+
+    <!--This Layout is consisted of SignIn and SignUp Buttons-->
+    <!--Clicking Signin will check the database of the users and
+    if checked, the other activity will show up-->
+    <!--Clicking Signup will show up the SignUp Activity page and
+    make users to set some information and add that information to the DB-->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:weightSum="10">
+
+        <Space
+            android:layout_weight="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id = "@+id/SigninButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Sign in"
+            android:onClick="onButton1Clicked"
+            android:layout_weight="2"
+            android:background="#ff7f00"
+            android:textColor="#ffffff"/>
+        <Button
+            android:id = "@+id/SignUpButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:onClick="onButton2Clicked"
+            android:layout_weight="2"
+            android:layout_marginLeft="16dp"
+            android:textColor="#ff7f00"
+            android:background="@drawable/my_button_bg"
+            />
+    </LinearLayout>
+
+</LinearLayout>
