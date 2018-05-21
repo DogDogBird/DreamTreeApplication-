@@ -81,7 +81,8 @@ public class MainActivity extends AppCompatActivity
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener,
-        PlacesListener{
+        PlacesListener
+{
 
     private GoogleApiClient mGoogleApiClient = null;
     private GoogleMap mGoogleMap = null;
@@ -228,11 +229,13 @@ public class MainActivity extends AppCompatActivity
 
     private void startLocationUpdates() {
 
-        if (!checkLocationServicesStatus()) {
+        if (!checkLocationServicesStatus())
+        {
 
             Log.d(TAG, "startLocationUpdates : call showDialogForLocationServiceSetting");
             showDialogForLocationServiceSetting();
-        }else {
+        }
+        else {
 
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                     && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -387,13 +390,15 @@ public class MainActivity extends AppCompatActivity
                 int hasFineLocationPermission = ContextCompat.checkSelfPermission(this,
                         Manifest.permission.ACCESS_FINE_LOCATION);
 
-                if (hasFineLocationPermission == PackageManager.PERMISSION_DENIED) {
+                if (hasFineLocationPermission == PackageManager.PERMISSION_DENIED)
+                {
 
                     ActivityCompat.requestPermissions(mActivity,
                             new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
                             PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
 
-                } else {
+                }
+                else {
 
                     Log.d(TAG, "onConnected : 퍼미션 가지고 있음");
                     Log.d(TAG, "onConnected : call startLocationUpdates");

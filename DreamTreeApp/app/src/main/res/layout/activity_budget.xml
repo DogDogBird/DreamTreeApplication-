@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <TextView
+        android:layout_weight="3"
+        android:id="@+id/RemainingMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="잔액: 150000원"
+        android:textSize = "30dp"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_weight="0.5"
+        android:id="@+id/InputBudgetButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "입력하기"
+        android:layout_gravity="center"
+        android:onClick="onInputBudgetButtonClicked"/>
+
+    <TextView
+        android:layout_weight="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_weight="3.5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:layout_weight="2"
+            android:id = "@+id/DateText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text = "날짜"
+            android:textSize="20dp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_weight="3"
+            android:id = "@+id/Foodtext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text = "먹은 음식"
+            android:textSize="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_weight="2"
+            android:id = "@+id/SpendMoneytext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text = "사용 금액"
+            android:textSize="20dp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_weight="3"
+            android:id = "@+id/RemainingMoneyText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text = "잔액"
+            android:textSize="20dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
